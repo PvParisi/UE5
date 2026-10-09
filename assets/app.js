@@ -30,7 +30,6 @@ const SAVEURS = [
   }
 
   const racine = document.documentElement;
-  const titreBase = document.title.split(' – ')[0];
   const boutons = [];
 
   // Colori: applicati subito (lo script è nel <head>), così non si vede la saveur 1 prima di quella giusta
@@ -40,7 +39,8 @@ const SAVEURS = [
     racine.style.setProperty('--saveur-deep', s.deep);
     racine.style.setProperty('--saveur-tint', s.tint);
 
-    const meta = document.querySelector('meta[name="theme-color"]');
+    // Colore della barra del browser, solo dove l'intestazione è colorata
+    const meta = document.querySelector('meta[name="theme-color"][data-avec-saveur]');
     if (meta) meta.setAttribute('content', s.color);
   }
 
@@ -53,7 +53,9 @@ const SAVEURS = [
       if (champ in s) el.textContent = s[champ];
     });
 
-    if (document.title.includes(' – ')) document.title = titreBase + ' – ' + s.nom;
+    // <title data-avec-saveur>Marque – Saveur</title>: aggiorna la parte dopo il trattino
+    const titre = document.querySelector('title[data-avec-saveur]');
+    if (titre) document.title = titre.textContent.split(' – ')[0] + ' – ' + s.nom;
 
     document.querySelectorAll('a[data-lien]').forEach(function (a) {
       a.setAttribute('href', avecSaveur(a.getAttribute('href'), i));

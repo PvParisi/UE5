@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="[Nom de la marque] : le vigneron, l'origine du vin et la fabrication du cocktail.">
+<title>Notre histoire – [Nom de la marque]</title>
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js"></script>
+</head>
+<body>
+<div class="page">
+
+<header class="entete entete--ligne">
+  <span class="marque">[Nom de la marque]</span>
+</header>
+
+<nav class="retour" aria-label="Navigation">
+  <a href="index.html" data-lien="retour">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+      <path class="trait trait--rond trait--fleche" d="M15 5l-7 7 7 7"/>
+    </svg>
+    <span>Retour à la saveur</span>
+  </a>
+</nav>
+
+<main>
+
+<section class="bloc histoire-intro" aria-labelledby="titre-histoire">
+  <div class="photo-attente">[Photo&nbsp;: le vigneron dans ses vignes]</div>
+  <h1 id="titre-histoire">[Prénom Nom], vigneron à [commune]</h1>
+  <p class="texte">[Trois ou quatre phrases&nbsp;: le domaine, la famille, pourquoi ce vin a été choisi pour ce cocktail.]</p>
+</section>
+
+<section class="bloc bloc--suite bloc--g12" aria-labelledby="titre-origine">
+  <h2 id="titre-origine">D'où vient le vin</h2>
+  <div class="carte-attente">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+      <path class="trait trait--doux" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
+      <circle class="trait trait--doux" cx="12" cy="9.8" r="2.3"/>
+    </svg>
+    <span>[Carte&nbsp;: appellation et parcelles]</span>
+  </div>
+  <p class="texte texte--16">[Appellation], [région]. [Le sol et le climat en une phrase.]</p>
+</section>
+
+<section class="bloc bloc--suite" aria-labelledby="titre-methode">
+  <h2 id="titre-methode">Comment on le fait</h2>
+  <ol class="etapes">
+    <li>
+      <span class="etape-num" aria-hidden="true">1</span>
+      <div>
+        <strong>Le vin de base</strong>
+        <span>[Cépages], vendangés et vinifiés au domaine.</span>
+      </div>
+    </li>
+    <li>
+      <span class="etape-num" aria-hidden="true">2</span>
+      <div>
+        <strong>L'assemblage</strong>
+        <span>Le vin rencontre [les arômes naturels]. Il reste majoritaire&nbsp;: au moins 50&nbsp;%.</span>
+      </div>
+    </li>
+    <li>
+      <span class="etape-num" aria-hidden="true">3</span>
+      <div>
+        <strong>La mise en bouteille</strong>
+        <span>En petites bouteilles de [20]&nbsp;cl, à [lieu].</span>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="edition" aria-labelledby="titre-edition">
+  <div class="edition-visuel" aria-hidden="true">[Visuel]</div>
+  <div class="edition-texte">
+    <h2 id="titre-edition">Édition limitée&nbsp;: étiquette signée [artiste]</h2>
+    <p>[Une collaboration par saison&nbsp;: artiste, designer, lieu.]</p>
+  </div>
+</section>
+
+<section class="bloc bloc--suite bloc--g12" aria-labelledby="titre-vente">
+  <h2 id="titre-vente">Où le trouver</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path class="trait" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
+        <circle class="trait" cx="12" cy="9.8" r="2.3"/>
+      </svg>
+      <span>[Caviste], [ville]</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path class="trait" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
+        <circle class="trait" cx="12" cy="9.8" r="2.3"/>
+      </svg>
+      <span>[Bar à vin], [ville]</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path class="trait" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
+        <circle class="trait" cx="12" cy="9.8" r="2.3"/>
+      </svg>
+      <span>[Épicerie fine], [ville]</span>
+    </li>
+  </ul>
+  <!-- [à compléter] : lien vers la liste complète des points de vente -->
+  <a class="bouton bouton--contour" href="#">Voir tous les points de vente</a>
+</section>
+
+</main>
+
+<footer class="pied">
+  <a class="pied-lien" href="e-label/" data-lien="elabel">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+      <circle class="trait" cx="12" cy="12" r="9.5"/>
+      <path class="trait trait--rond" d="M12 11v6"/>
+      <circle class="plein" cx="12" cy="7.6" r="1.3"/>
+    </svg>
+    <span>Ingrédients et valeurs nutritionnelles</span>
+  </a>
+  <p class="avertissement">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+</footer>
+
+</div>
+</body>
+</html>
