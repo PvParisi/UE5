@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FF8A3D">
+<meta name="description" content="[Nom de la marque] : cocktail à base de vin. Composition, service et origine du vin.">
+<title>[Nom de la marque] – [Saveur 1]</title>
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="entete entete--saveur">
+  <span class="marque">[Nom de la marque]</span>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="saveur-nom">
+  <div class="hero-titre">
+    <h1 id="saveur-nom" data-saveur="nom">[Saveur 1]</h1>
+    <p class="hero-indice" data-saveur="indice">[ex. agrumes]</p>
+  </div>
+  <div class="hero-corps">
+    <dl class="chiffres">
+      <div>
+        <dt>Degré</dt>
+        <dd>[X]&nbsp;% vol.</dd>
+      </div>
+      <div>
+        <dt>Format</dt>
+        <dd>[20]&nbsp;cl</dd>
+      </div>
+      <div>
+        <dt>Part de vin</dt>
+        <dd>[XX]&nbsp;%</dd>
+      </div>
+    </dl>
+    <svg class="bouteille" viewBox="0 0 120 300" width="120" height="300" aria-hidden="true" focusable="false">
+      <defs>
+        <clipPath id="bouteille-verre">
+          <path d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
+        </clipPath>
+      </defs>
+      <path class="b-fond" d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
+      <rect class="b-liquide" x="0" y="104" width="120" height="200" clip-path="url(#bouteille-verre)"/>
+      <path class="b-contour" d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
+      <rect class="b-encre" x="46" y="6" width="28" height="26" rx="4"/>
+      <rect class="b-etiquette" x="27" y="166" width="66" height="80"/>
+      <text class="b-nom" x="60" y="188">[NOM]</text>
+      <g class="b-encre">
+        <rect x="46" y="200" width="10" height="10"/>
+        <rect x="64" y="200" width="10" height="10"/>
+        <rect x="46" y="218" width="10" height="10"/>
+        <rect x="59" y="201" width="3" height="3"/>
+        <rect x="59" y="207" width="3" height="3"/>
+        <rect x="57" y="214" width="3" height="3"/>
+        <rect x="64" y="214" width="3" height="3"/>
+        <rect x="68" y="218" width="3" height="3"/>
+        <rect x="60" y="222" width="3" height="3"/>
+        <rect x="71" y="224" width="3" height="3"/>
+      </g>
+      <g class="b-papier">
+        <rect x="49" y="203" width="4" height="4"/>
+        <rect x="67" y="203" width="4" height="4"/>
+        <rect x="49" y="221" width="4" height="4"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="bloc saveurs" aria-labelledby="titre-saveurs" hidden>
+  <h2 id="titre-saveurs">Toutes les saveurs</h2>
+  <div class="saveurs-grille" data-saveurs></div>
+</section>
+
+<section class="bloc" aria-labelledby="titre-bouteille">
+  <h2 id="titre-bouteille">Dans la bouteille</h2>
+  <div class="compo">
+    <div class="compo-barre">
+      <div class="compo-vin">Vin [XX]&nbsp;%</div>
+      <div class="compo-aromes">[Arômes…]</div>
+    </div>
+    <p class="note">Au moins 50&nbsp;% de vin&nbsp;: c'est la règle pour une boisson aromatisée à base de vin.</p>
+  </div>
+  <ul class="compo-liste">
+    <li><strong>Le vin.</strong> [Type de vin, appellation, domaine]</li>
+    <li><strong>Les arômes.</strong> [Fruits, plantes, épices&nbsp;: ingrédients naturels]</li>
+    <li><strong>Le sucre.</strong> [X]&nbsp;g par litre</li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite" aria-labelledby="titre-service">
+  <h2 id="titre-service">Comment le servir</h2>
+  <div class="service">
+    <div class="service-carte">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
+        <path class="trait" d="M10 4.5a2 2 0 0 1 4 0v9.3a4 4 0 1 1-4 0Z"/>
+        <path class="trait trait--rond" d="M12 10v7"/>
+      </svg>
+      <span class="service-titre">Bien frais</span>
+      <span>[6–8]&nbsp;°C</span>
+    </div>
+    <div class="service-carte">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
+        <circle class="trait" cx="12" cy="12" r="8.5"/>
+        <circle class="trait" cx="12" cy="12" r="4.5"/>
+      </svg>
+      <span class="service-titre">Pour accompagner</span>
+      <span>[Accord&nbsp;: plat, fromage…]</span>
+    </div>
+  </div>
+</section>
+
+<section class="vigneron" aria-labelledby="titre-vigneron">
+  <h2 id="titre-vigneron">Qui fait ce vin&nbsp;?</h2>
+  <p>[Prénom], vigneron à [commune], [appellation].</p>
+  <a class="bouton bouton--saveur" href="histoire.html" data-lien="histoire">Découvrir notre histoire</a>
+</section>
+
+</main>
+
+<footer class="pied">
+  <a class="pied-lien" href="e-label/" data-lien="elabel">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+      <circle class="trait" cx="12" cy="12" r="9.5"/>
+      <path class="trait trait--rond" d="M12 11v6"/>
+      <circle class="plein" cx="12" cy="7.6" r="1.3"/>
+    </svg>
+    <span>Ingrédients et valeurs nutritionnelles</span>
+  </a>
+  <p class="avertissement">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+</footer>
+
+</div>
+</body>
+</html>
