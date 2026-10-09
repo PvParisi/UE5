@@ -532,3 +532,103 @@ main { flex: 1 0 auto; }
 }
 .lieux svg { flex: 0 0 auto; }
 .lieux + .bouton { margin-top: 4px; }
+
+/* ==========================================================
+   E-label
+   ========================================================== */
+.elabel {
+  gap: 24px;
+  padding: 24px 24px 32px;
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+}
+.elabel-entete {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+}
+.elabel-produit {
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.elabel h1 {
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.elabel h2 {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.elabel-corps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.elabel-faits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+.elabel-faits > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.elabel-faits .elabel-large { grid-column: 1 / -1; }
+.elabel-faits dt {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.elabel-faits dd {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.elabel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.elabel-section--tableau { gap: 10px; }
+.elabel-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nutrition {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.nutrition tr { border-top: 1px solid var(--table-line); }
+.nutrition tr:first-child { border-top: 2px solid var(--ink); }
+.nutrition tr:last-child { border-bottom: 2px solid var(--ink); }
+.nutrition th,
+.nutrition td { padding: 10px 0; }
+.nutrition th {
+  text-align: left;
+  font-weight: 400;
+}
+.nutrition td { text-align: right; }
+.nutrition .nutrition-principal { font-weight: 700; }
+.nutrition .nutrition-dont { padding-left: 16px; }
+
+.elabel-pied {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.elabel-note {
+  padding: 16px;
+  border-radius: var(--r-16);
+  background: var(--panel);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
