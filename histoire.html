@@ -29,7 +29,14 @@
 <main>
 
 <section class="bloc histoire-intro" aria-labelledby="titre-histoire">
-  <div class="photo-attente">[Photo&nbsp;: Maréva au Domaine de Georges]</div>
+  <!-- Photo : Ionel Ceban, Pexels (licence Pexels). Original hors du dépôt. Pas de lazy-loading : elle est en haut de page. -->
+  <img class="photo"
+       src="assets/img/histoire-vignes-700.webp"
+       srcset="assets/img/histoire-vignes-700.webp 700w, assets/img/histoire-vignes-1050.webp 1050w"
+       sizes="(min-width: 480px) 432px, calc(100vw - 48px)"
+       width="1050" height="700"
+       alt="Une jeune femme dans les vignes au coucher du soleil tend une grappe de raisin blanc dans ses mains."
+       decoding="async" fetchpriority="high">
   <h1 id="titre-histoire">Maréva, Domaine de Georges</h1>
   <p class="texte">Le Domaine de Georges est un domaine familial installé en Provence depuis une cinquantaine d'années. Une partie de son vin était vendue en vrac, dont un blanc d'Ugni blanc de plus en plus difficile à vendre. Plutôt que de le brader, Maréva et ses camarades de master ont choisi de le transformer&nbsp;: c'est la naissance de PÉTILLE, une gamme de cocktails pétillants à base de vin.</p>
 </section>
