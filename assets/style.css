@@ -635,3 +635,52 @@ main { flex: 1 0 auto; }
   line-height: 1.45;
   color: var(--ink-soft);
 }
+
+/* ==========================================================
+   Points de vente
+   ========================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+sup { line-height: 0; }
+
+.pdv-intro { padding-top: 8px; }
+.pdv-intro h1 {
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.villes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.villes a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.villes a:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.ville { scroll-margin-top: 16px; }
+.lieu-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+}
+.lieu-texte strong { font-weight: 700; }
+.lieu-texte span {
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}

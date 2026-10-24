@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="PÉTILLE&nbsp;: les points de vente, ville par ville.">
+<title>Points de vente – PÉTILLE</title>
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js"></script>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position: absolute">
+  <symbol id="icone-lieu" viewBox="0 0 24 24">
+    <path class="trait" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
+    <circle class="trait" cx="12" cy="9.8" r="2.3"/>
+  </symbol>
+</svg>
+<div class="page">
+
+<header class="entete entete--ligne">
+  <span class="marque">PÉTILLE</span>
+</header>
+
+<nav class="retour" aria-label="Navigation">
+  <a href="histoire.html" data-lien="retour">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+      <path class="trait trait--rond trait--fleche" d="M15 5l-7 7 7 7"/>
+    </svg>
+    <span>Retour à l'histoire</span>
+  </a>
+</nav>
+
+<main>
+
+<!-- Points de vente inventés à la demande du groupe (voir CLAUDE.md) : pas d'adresses. -->
+<section class="bloc pdv-intro" aria-labelledby="titre-pdv">
+  <h1 id="titre-pdv">Points de vente</h1>
+  <p class="texte">Cavistes, épiceries fines et bars à vin, dans dix villes de France et au domaine.</p>
+  <nav aria-label="Villes">
+    <ul class="villes">
+    <li><a href="#domaine">Au domaine</a></li>
+    <li><a href="#bordeaux">Bordeaux</a></li>
+    <li><a href="#lille">Lille</a></li>
+    <li><a href="#lyon">Lyon</a></li>
+    <li><a href="#marseille">Marseille</a></li>
+    <li><a href="#montpellier">Montpellier</a></li>
+    <li><a href="#nantes">Nantes</a></li>
+    <li><a href="#nice">Nice</a></li>
+    <li><a href="#paris">Paris</a></li>
+    <li><a href="#strasbourg">Strasbourg</a></li>
+    <li><a href="#toulouse">Toulouse</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="domaine" aria-labelledby="ville-domaine">
+  <h2 id="ville-domaine">Au domaine</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Boutique du Domaine de Georges</strong>
+        <span>Vente au domaine, [commune]</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="bordeaux" aria-labelledby="ville-bordeaux">
+  <h2 id="ville-bordeaux">Bordeaux</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>La Cave du Quai Sauvage</strong>
+        <span>Caviste · Chartrons</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Bocal &amp; Bouchon</strong>
+        <span>Épicerie fine · Saint-Michel</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="lille" aria-labelledby="ville-lille">
+  <h2 id="ville-lille">Lille</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Brique Rouge</strong>
+        <span>Caviste · Vieux-Lille</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Les Trois Beffrois</strong>
+        <span>Épicerie fine · Wazemmes</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="lyon" aria-labelledby="ville-lyon">
+  <h2 id="ville-lyon">Lyon</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Saône &amp; Cep</strong>
+        <span>Caviste · Croix-Rousse</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Mirabelle Rousse</strong>
+        <span>Épicerie fine · Presqu'île</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="marseille" aria-labelledby="ville-marseille">
+  <h2 id="ville-marseille">Marseille</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave du Panier Bleu</strong>
+        <span>Caviste · Le Panier</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Savon &amp; Sel</strong>
+        <span>Épicerie fine · Cours Julien</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="montpellier" aria-labelledby="ville-montpellier">
+  <h2 id="ville-montpellier">Montpellier</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Écusson Vert</strong>
+        <span>Caviste · Écusson</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>La Treille Bleue</strong>
+        <span>Bar à vin · Antigone</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="nantes" aria-labelledby="ville-nantes">
+  <h2 id="ville-nantes">Nantes</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Loire Lumière</strong>
+        <span>Caviste · Île de Nantes</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Fil d'Erdre</strong>
+        <span>Épicerie fine · Erdre</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="nice" aria-labelledby="ville-nice">
+  <h2 id="ville-nice">Nice</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Galet Blanc</strong>
+        <span>Caviste · Vieux-Nice</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="paris" aria-labelledby="ville-paris">
+  <h2 id="ville-paris">Paris</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Lumen</strong>
+        <span>Caviste · 11<sup>e</sup> arrondissement</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Maison Ardoise</strong>
+        <span>Épicerie fine · 6<sup>e</sup> arrondissement</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Le Comptoir des Vignes Claires</strong>
+        <span>Bar à vin · 18<sup>e</sup> arrondissement</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="strasbourg" aria-labelledby="ville-strasbourg">
+  <h2 id="ville-strasbourg">Strasbourg</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Colombage</strong>
+        <span>Caviste · Petite France</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Rhin Doré</strong>
+        <span>Épicerie fine · Krutenau</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="bloc bloc--suite bloc--g12 ville" id="toulouse" aria-labelledby="ville-toulouse">
+  <h2 id="ville-toulouse">Toulouse</h2>
+  <ul class="lieux">
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Cave Violette &amp; Garonne</strong>
+        <span>Caviste · Saint-Cyprien</span>
+      </div>
+    </li>
+    <li>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><use href="#icone-lieu"/></svg>
+      <div class="lieu-texte">
+        <strong>Épicerie Pastel Doux</strong>
+        <span>Épicerie fine · Carmes</span>
+      </div>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="pied">
+  <a class="pied-lien" href="e-label/" data-lien="elabel">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+      <circle class="trait" cx="12" cy="12" r="9.5"/>
+      <path class="trait trait--rond" d="M12 11v6"/>
+      <circle class="plein" cx="12" cy="7.6" r="1.3"/>
+    </svg>
+    <span>Ingrédients et valeurs nutritionnelles</span>
+  </a>
+  <p class="avertissement">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+</footer>
+
+</div>
+</body>
+</html>
