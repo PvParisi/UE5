@@ -29,6 +29,7 @@
 - Nessun tracciamento su tutto il sito.
 - Loi Évin: contenuti informativi (origine, terroir, composizione, metodo di produzione). Niente immagini o slogan che associno il prodotto a festa, seduzione o successo sociale. Su ogni pagina: « L'abus d'alcool est dangereux pour la santé, à consommer avec modération. »
 - Non inventare dati (gradazione, zuccheri, valori nutrizionali, nomi, luoghi): segnaposto finché il gruppo non li fornisce.
+  - Eccezione (24/10/2026, su mia richiesta): i punti vendita in `points-de-vente.html` e in « Où le trouver » sono inventati. Niente indirizzi, per non indicare attività reali. Non sostituirli con segnaposto.
 - Accessibilità: contrasto del testo ≥ 4.5:1, target tattili ≥ 44 px, veri `<button>` e `<a>`, `alt` sulle immagini, focus visibile.
 - Mobile first (390 px, iPhone), ma leggibile anche proiettato su un grande schermo.
 - Leggero: immagini WebP compresse, lazy-loading; deve caricarsi in fretta in 4G.
