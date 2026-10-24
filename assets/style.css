@@ -28,8 +28,25 @@
   --dash: #CDBFD0;
   --table-line: #DDD3DF;
   --panel: #F5F0F6;
-  --eau: #BFD9EC;      /* solo decorativo (mappa) */
-  --vegetal: #CFE3C6; /* solo decorativo (mappa) */
+
+  /* Mappa illustrativa (histoire.html) */
+  --carte-terre: #F3F0EA;
+  --carte-bois: #C8E6C1;
+  --carte-eau: #AADAFF;
+  --carte-vigne: #DFEBCD;
+  --carte-rang: #B7CC9B;
+  --carte-route-bord: #DAD5CB;
+  --carte-axe: #FDE293;
+  --carte-axe-bord: #EDC45A;
+  --carte-bati: #E6E1DA;
+  --carte-bati-bord: #D2CBC1;
+  --carte-texte: #5F6368;
+  --carte-texte-fort: #3C4043;
+  --carte-village: #ECE7E0;
+  --carte-texte-eau: #1A5C99;
+  --carte-texte-bois: #2E6B34;
+  --carte-repere: #E5483B;
+  --carte-repere-bord: #B3261E;
 
   /* Raggi */
   --r-14: 14px;
@@ -443,7 +460,7 @@ main { flex: 1 0 auto; }
 }
 .carte {
   margin: 0;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--line-strong);
   border-radius: var(--r-20);
   overflow: hidden;
 }
@@ -451,42 +468,109 @@ main { flex: 1 0 auto; }
   width: 100%;
   height: auto;
 }
-.carte-fond { fill: var(--panel); }
-.carte-eau {
+.carte-terre { fill: var(--carte-terre); }
+.carte-bois { fill: var(--carte-bois); }
+.carte-ruisseau {
   fill: none;
-  stroke: var(--eau);
-  stroke-width: 7;
+  stroke: var(--carte-eau);
+  stroke-width: 5;
   stroke-linecap: round;
 }
-.carte-route-bord,
-.carte-route { fill: none; stroke-linecap: round; }
-.carte-route-bord { stroke: var(--line-strong); stroke-width: 14; }
-.carte-route { stroke: var(--paper); stroke-width: 10; }
-.carte-pins { fill: var(--vegetal); }
-.carte-vigne { fill: var(--line-strong); }
-.carte-parcelle { fill: var(--saveur); }
-.carte-rangs { fill: url(#rangs); }
-.carte-rang { stroke: var(--ink); stroke-width: 1.2; stroke-opacity: 0.22; }
-.carte-contour {
-  fill: none;
-  stroke: var(--ink);
-  stroke-width: 2.5;
-  stroke-linejoin: round;
+.carte-vigne { fill: var(--carte-vigne); }
+.carte-rangs { fill: url(#rangs-vigne); }
+.carte-rang { stroke: var(--carte-rang); stroke-width: 1; }
+.carte-village { fill: var(--carte-village); }
+.carte-bati {
+  fill: var(--carte-bati);
+  stroke: var(--carte-bati-bord);
+  stroke-width: 0.8;
 }
-.carte-etiquette {
-  fill: var(--paper);
+.carte-parcelle {
+  fill: var(--saveur);
   stroke: var(--ink);
   stroke-width: 1.5;
+  stroke-linejoin: round;
 }
-.carte-texte {
-  fill: var(--ink);
+.carte-route-bord,
+.carte-route,
+.carte-chemin-bord,
+.carte-chemin,
+.carte-axe-bord,
+.carte-axe { fill: none; stroke-linecap: round; }
+.carte-route-bord { stroke: var(--carte-route-bord); stroke-width: 6.5; }
+.carte-route { stroke: var(--paper); stroke-width: 4.5; }
+.carte-chemin-bord { stroke: var(--carte-route-bord); stroke-width: 4.5; }
+.carte-chemin { stroke: var(--paper); stroke-width: 2.8; }
+.carte-axe-bord { stroke: var(--carte-axe-bord); stroke-width: 8.5; }
+.carte-axe { stroke: var(--carte-axe); stroke-width: 6.5; }
+
+/* Noms: police système et halo blanc, comme sur une application de cartes */
+.carte-nom {
+  fill: var(--carte-texte);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 500;
+  text-anchor: middle;
+  stroke: var(--paper);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+.carte-nom--eau { fill: var(--carte-texte-eau); font-style: italic; }
+.carte-nom--bois { fill: var(--carte-texte-bois); font-style: italic; }
+.carte-nom--village {
+  fill: var(--carte-texte-fort);
   font-size: 12px;
+  font-weight: 700;
+}
+.carte-nom--hameau {
+  fill: var(--carte-texte-fort);
+  font-size: 10px;
+  font-weight: 600;
+}
+.carte-nom--repere {
+  fill: var(--ink);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+.carte-nom--legende {
+  fill: var(--ink);
+  font-weight: 600;
+  text-anchor: start;
+  stroke: none;
+}
+.carte-nom--echelle { fill: var(--ink); font-weight: 600; }
+.carte-bouclier rect {
+  fill: var(--paper);
+  stroke: var(--carte-route-bord);
+  stroke-width: 1;
+}
+.carte-nom--bouclier {
+  fill: var(--carte-texte-fort);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 8.5px;
   font-weight: 700;
   text-anchor: middle;
 }
-.carte-batiment,
-.carte-nord path { fill: var(--ink); }
-.carte-porte { fill: var(--saveur); }
+.carte-repere {
+  fill: var(--carte-repere);
+  stroke: var(--carte-repere-bord);
+  stroke-width: 1;
+}
+.carte-repere-point { fill: var(--paper); }
+.carte-ombre { fill: var(--ink); fill-opacity: 0.25; }
+.carte-cartouche {
+  fill: var(--paper);
+  fill-opacity: 0.92;
+  stroke: var(--carte-route-bord);
+  stroke-width: 1;
+}
+.carte-echelle {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
 
 .etapes {
   display: flex;

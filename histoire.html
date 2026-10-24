@@ -36,52 +36,106 @@
 
 <section class="bloc bloc--suite bloc--g12" aria-labelledby="titre-origine">
   <h2 id="titre-origine">D'où vient le vin</h2>
-  <!-- Plan illustratif inventé (voir CLAUDE.md) : pas une carte réelle, pas d'échelle. -->
+  <!-- Plan illustratif inventé, dans le style d'une application de cartes (voir CLAUDE.md) :
+       villages, routes, cours d'eau et noms fictifs ; aucune tuile ni marque d'un service réel. -->
   <figure class="carte">
-    <svg viewBox="0 0 340 220" role="img" aria-labelledby="carte-titre">
-      <title id="carte-titre">Plan illustratif du Domaine de Georges&nbsp;: la parcelle d'Ugni blanc, les autres vignes, la cave, un ruisseau et une pinède.</title>
+    <svg viewBox="0 0 340 250" role="img" aria-labelledby="carte-titre">
+      <title id="carte-titre">Plan illustratif des environs du Domaine de Georges&nbsp;: le domaine et sa parcelle d'Ugni blanc entre les villages de Mourvelle et de Roquebastide, le long de la D&nbsp;604, au milieu des vignes, près du ruisseau Le Vallat et du massif de la Cigalière. Échelle&nbsp;: 500&nbsp;m.</title>
       <defs>
-        <pattern id="rangs" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-6)">
-          <line class="carte-rang" x1="0" y1="0" x2="0" y2="9"/>
+        <pattern id="rangs-vigne" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+          <line class="carte-rang" x1="0" y1="0" x2="0" y2="5"/>
         </pattern>
+        <path id="trace-axe" d="M-10 36 C30 44 50 50 70 52 C120 66 170 80 220 96 S272 124 296 132 S330 140 350 138"/>
+        <path id="trace-sud" d="M70 52 C80 100 140 150 160 180 S180 200 182 212 S186 240 190 260"/>
+        <path id="trace-est" d="M296 132 C300 100 320 80 350 70"/>
+        <path id="trace-chemin" d="M178 85 C180 96 182 104 184 112"/>
+        <path id="trace-vallat" d="M-6 152 C50 142 80 172 130 168 S210 142 250 158 S320 198 346 188"/>
       </defs>
-      <rect class="carte-fond" width="340" height="220"/>
 
-      <path class="carte-eau" d="M262 0 C250 40 290 70 276 110 S300 180 318 220"/>
-      <path class="carte-route-bord" d="M0 140 C70 128 120 152 190 142 S300 120 340 128"/>
-      <path class="carte-route" d="M0 140 C70 128 120 152 190 142 S300 120 340 128"/>
+      <rect class="carte-terre" width="340" height="250"/>
 
-      <g class="carte-pins">
-        <circle cx="306" cy="66" r="10"/>
-        <circle cx="324" cy="80" r="11"/>
-        <circle cx="304" cy="88" r="8"/>
-        <circle cx="160" cy="196" r="9"/>
-        <circle cx="176" cy="186" r="10"/>
-        <circle cx="174" cy="206" r="8"/>
+      <!-- Garrigue, bois et eau -->
+      <polygon class="carte-bois" points="232,0 340,0 340,58 302,72 266,58 246,26"/>
+      <polygon class="carte-bois" points="0,180 40,170 86,190 104,250 0,250"/>
+      <use class="carte-ruisseau" href="#trace-vallat"/>
+
+      <!-- Vignes -->
+      <polygon class="carte-vigne" points="100,66 140,62 142,94 102,96"/>
+      <polygon class="carte-vigne" points="146,60 184,58 186,86 148,90"/>
+      <polygon class="carte-vigne" points="100,100 138,98 140,126 104,128"/>
+      <polygon class="carte-vigne" points="200,100 240,96 242,122 202,126"/>
+      <polygon class="carte-vigne" points="56,104 92,100 94,130 58,134"/>
+      <polygon class="carte-vigne" points="244,64 280,60 282,86 246,90"/>
+      <polygon class="carte-vigne" points="110,136 148,134 150,152 112,154"/>
+      <polygon class="carte-vigne" points="214,132 252,128 254,150 216,152"/>
+      <polygon class="carte-vigne" points="20,96 50,92 52,120 22,124"/>
+      <polygon class="carte-rangs" points="100,66 140,62 142,94 102,96"/>
+      <polygon class="carte-rangs" points="146,60 184,58 186,86 148,90"/>
+      <polygon class="carte-rangs" points="100,100 138,98 140,126 104,128"/>
+      <polygon class="carte-rangs" points="200,100 240,96 242,122 202,126"/>
+      <polygon class="carte-rangs" points="56,104 92,100 94,130 58,134"/>
+      <polygon class="carte-rangs" points="244,64 280,60 282,86 246,90"/>
+      <polygon class="carte-rangs" points="110,136 148,134 150,152 112,154"/>
+      <polygon class="carte-rangs" points="214,132 252,128 254,150 216,152"/>
+      <polygon class="carte-rangs" points="20,96 50,92 52,120 22,124"/>
+
+      <!-- Villages -->
+      <polygon class="carte-village" points="30,18 98,12 106,50 72,64 36,54"/>
+      <polygon class="carte-village" points="266,112 318,104 328,146 290,158 264,142"/>
+      <polygon class="carte-village" points="164,198 198,194 202,218 168,222"/>
+      <g class="carte-bati">
+        <rect x="46" y="26" width="10" height="7"/><rect x="60" y="22" width="8" height="9"/><rect x="74" y="28" width="11" height="7"/>
+        <rect x="44" y="40" width="9" height="8"/><rect x="82" y="40" width="10" height="8"/><rect x="62" y="46" width="12" height="7"/>
+        <rect x="276" y="118" width="9" height="8"/><rect x="290" y="114" width="11" height="7"/><rect x="306" y="120" width="8" height="9"/>
+        <rect x="280" y="134" width="12" height="7"/><rect x="300" y="138" width="9" height="8"/><rect x="314" y="132" width="7" height="7"/>
+        <rect x="172" y="202" width="8" height="6"/><rect x="186" y="200" width="7" height="7"/><rect x="176" y="212" width="9" height="6"/>
+        <rect x="181" y="111" width="9" height="6" transform="rotate(12 185 114)"/>
       </g>
 
-      <polygon class="carte-vigne" points="16,16 116,12 120,112 18,118"/>
-      <polygon class="carte-rangs" points="16,16 116,12 120,112 18,118"/>
-      <polygon class="carte-vigne" points="18,160 140,156 146,204 22,208"/>
-      <polygon class="carte-rangs" points="18,160 140,156 146,204 22,208"/>
+      <!-- Routes -->
+      <use class="carte-route-bord" href="#trace-sud"/>
+      <use class="carte-route-bord" href="#trace-est"/>
+      <use class="carte-chemin-bord" href="#trace-chemin"/>
+      <use class="carte-route" href="#trace-sud"/>
+      <use class="carte-route" href="#trace-est"/>
+      <use class="carte-chemin" href="#trace-chemin"/>
+      <use class="carte-axe-bord" href="#trace-axe"/>
+      <use class="carte-axe" href="#trace-axe"/>
 
-      <polygon class="carte-parcelle" points="132,14 238,22 232,112 128,108"/>
-      <polygon class="carte-rangs" points="132,14 238,22 232,112 128,108"/>
-      <polygon class="carte-contour" points="132,14 238,22 232,112 128,108"/>
+      <!-- La parcelle d'Ugni blanc, dans la couleur de la saveur -->
+      <polygon class="carte-parcelle" points="160,98 175,97 176,110 161,111"/>
 
-      <rect class="carte-etiquette" x="138" y="43" width="88" height="38" rx="8"/>
-      <text class="carte-texte" x="182" y="59">Parcelle</text>
-      <text class="carte-texte" x="182" y="74">d'Ugni blanc</text>
+      <!-- Noms -->
+      <text class="carte-nom carte-nom--eau" dy="-5"><textPath href="#trace-vallat" startOffset="13%" text-anchor="middle">Le Vallat</textPath></text>
+      <text class="carte-nom carte-nom--bois" x="294" y="22">Massif de</text>
+      <text class="carte-nom carte-nom--bois" x="294" y="34">la Cigalière</text>
+      <text class="carte-nom carte-nom--bois" x="40" y="200">Bois de la</text>
+      <text class="carte-nom carte-nom--bois" x="40" y="212">Bastidoune</text>
+      <text class="carte-nom carte-nom--village" x="68" y="76">Mourvelle</text>
+      <text class="carte-nom carte-nom--village" x="296" y="174">Roquebastide</text>
+      <text class="carte-nom carte-nom--hameau" x="184" y="234">La Bastidoune</text>
 
-      <polygon class="carte-batiment" points="198,168 220,152 242,168"/>
-      <rect class="carte-batiment" x="202" y="168" width="36" height="22"/>
-      <rect class="carte-porte" x="215" y="176" width="10" height="14"/>
-      <text class="carte-texte" x="220" y="206">La cave</text>
-
-      <g class="carte-nord">
-        <path d="M322 14 L328 32 L322 28 L316 32 Z"/>
-        <text class="carte-texte" x="322" y="46">N</text>
+      <g class="carte-bouclier">
+        <rect x="114" y="57" width="30" height="13" rx="3"/>
+        <text class="carte-nom--bouclier" x="129" y="67">D&nbsp;604</text>
       </g>
+      <g class="carte-bouclier">
+        <rect x="96" y="104" width="26" height="13" rx="3"/>
+        <text class="carte-nom--bouclier" x="109" y="114">D&nbsp;58</text>
+      </g>
+
+      <!-- Repère du domaine -->
+      <ellipse class="carte-ombre" cx="185" cy="113" rx="5" ry="2"/>
+      <path class="carte-repere" d="M185 113 C178 104 175 99 175 93 A10 10 0 1 1 195 93 C195 99 192 104 185 113 Z"/>
+      <circle class="carte-repere-point" cx="185" cy="93" r="3.6"/>
+      <text class="carte-nom carte-nom--repere" x="185" y="132">Domaine de Georges</text>
+
+      <!-- Légende et échelle -->
+      <rect class="carte-cartouche" x="8" y="226" width="132" height="18" rx="4"/>
+      <rect class="carte-parcelle" x="15" y="231" width="10" height="8"/>
+      <text class="carte-nom carte-nom--legende" x="31" y="238.5">Parcelle d'Ugni blanc</text>
+      <text class="carte-nom carte-nom--echelle" x="304" y="234">500&nbsp;m</text>
+      <path class="carte-echelle" d="M276 236 V241 H332 V236"/>
     </svg>
   </figure>
   <p class="texte texte--16">Une parcelle d'Ugni blanc du domaine, en Provence. Un cépage neutre&nbsp;: un support frais et acide pour les jus. Vin de France. [Le sol et le climat en une phrase.]</p>
