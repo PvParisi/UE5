@@ -14,9 +14,9 @@
 /* ---------- Token di design ---------- */
 :root {
   /* Colori della saveur corrente (default: saveur 1, sovrascritti da app.js) */
-  --saveur: #FF8A3D;
-  --saveur-deep: #D9561A;
-  --saveur-tint: #FFE6D6;
+  --saveur: #FFB627;
+  --saveur-deep: #D98200;
+  --saveur-tint: #FFF1D3;
 
   /* Colori fissi */
   --ink: #2B1730;
@@ -62,6 +62,10 @@ h1, h2, p, ul, ol, dl, dd { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 svg { display: block; }
 [hidden] { display: none !important; }
+
+/* Variante sans alcool: <html data-sans-alcool> impostato da app.js */
+[data-sans-alcool] [data-alcool="avec"],
+:root:not([data-sans-alcool]) [data-alcool="sans"] { display: none !important; }
 
 a { color: var(--ink); }
 a:hover { color: var(--ink-soft); }
@@ -263,6 +267,11 @@ h2 {
   font-weight: 700;
   line-height: 1.2;
   overflow-wrap: anywhere;
+}
+.saveur-mention {
+  margin-top: -6px;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 /* ---------- Dans la bouteille ---------- */

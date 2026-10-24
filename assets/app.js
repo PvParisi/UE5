@@ -6,9 +6,12 @@
 /* Le saveur: aggiungere o modificare una saveur = toccare solo qui.
    Nell'URL l'ordine parte da 1: index.html?saveur=2 apre la seconda. */
 const SAVEURS = [
-  { nom: '[Saveur 1]', indice: '[ex. agrumes]',         color: '#FF8A3D', deep: '#D9561A', tint: '#FFE6D6' },
-  { nom: '[Saveur 2]', indice: '[ex. fruits rouges]',   color: '#FF7EB6', deep: '#C93D7E', tint: '#FFE3EF' },
-  { nom: '[Saveur 3]', indice: '[ex. herbes fraîches]', color: '#8FD97A', deep: '#3E8F3A', tint: '#E6F6E0' },
+  { nom: 'Sunset Tropical', fruits: 'Ananas et mangue',                     color: '#FFB627', deep: '#D98200', tint: '#FFF1D3' },
+  { nom: 'Berry Pop',       fruits: 'Framboise et cranberry',               color: '#FF6F8E', deep: '#C9284F', tint: '#FFE2E8' },
+  { nom: 'Green Vibe',      fruits: 'Pomme verte et menthe',                color: '#8FD97A', deep: '#3E8F3A', tint: '#E6F6E0' },
+  { nom: 'Peach Glow',      fruits: 'Pêche et orange sanguine',             color: '#FF8A3D', deep: '#D9561A', tint: '#FFE6D6' },
+  { nom: '[Saveur 6]',      fruits: '[Pamplemousse rose, lavande, citron]', color: '#C7A6F2', deep: '#7E57C2', tint: '#F1E9FC' },
+  { nom: 'Golden Bloom',    fruits: 'Pomme et fleur de sureau', sansAlcool: true, color: '#F5D76E', deep: '#C9A227', tint: '#FDF6DC' },
 ];
 
 (function () {
@@ -32,9 +35,11 @@ const SAVEURS = [
   const racine = document.documentElement;
   const boutons = [];
 
-  // Colori: applicati subito (lo script è nel <head>), così non si vede la saveur 1 prima di quella giusta
+  // Colori e variante sans alcool: applicati subito (lo script è nel <head>),
+  // così non si vede la saveur 1 prima di quella giusta
   function couleurs(i) {
     const s = SAVEURS[i];
+    racine.toggleAttribute('data-sans-alcool', Boolean(s.sansAlcool));
     racine.style.setProperty('--saveur', s.color);
     racine.style.setProperty('--saveur-deep', s.deep);
     racine.style.setProperty('--saveur-tint', s.tint);
@@ -87,6 +92,12 @@ const SAVEURS = [
       nom.textContent = s.nom;
 
       b.append(pastille, nom);
+      if (s.sansAlcool) {
+        const mention = document.createElement('span');
+        mention.className = 'saveur-mention';
+        mention.textContent = 'Sans alcool';
+        b.append(mention);
+      }
       b.addEventListener('click', function () {
         appliquer(i);
         history.replaceState(null, '', avecSaveur(location.pathname.split('/').pop() + location.search + location.hash, i));
