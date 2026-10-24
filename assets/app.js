@@ -10,7 +10,7 @@ const SAVEURS = [
   { nom: 'Berry Pop',       fruits: 'Framboise et cranberry',               color: '#FF6F8E', deep: '#C9284F', tint: '#FFE2E8' },
   { nom: 'Green Vibe',      fruits: 'Pomme verte et menthe',                color: '#8FD97A', deep: '#3E8F3A', tint: '#E6F6E0' },
   { nom: 'Peach Glow',      fruits: 'Pêche et orange sanguine',             color: '#FF8A3D', deep: '#D9561A', tint: '#FFE6D6' },
-  { nom: '[Saveur 6]',      fruits: '[Pamplemousse rose, lavande, citron]', color: '#C7A6F2', deep: '#7E57C2', tint: '#F1E9FC' },
+  { nom: '[Nom à venir]',   fruits: '[Pamplemousse rose, lavande, citron]', color: '#C7A6F2', deep: '#7E57C2', tint: '#F1E9FC' },
   { nom: 'Golden Bloom',    fruits: 'Pomme et fleur de sureau', sansAlcool: true, color: '#F5D76E', deep: '#C9A227', tint: '#FDF6DC' },
 ];
 
