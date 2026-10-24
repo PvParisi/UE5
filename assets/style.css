@@ -28,6 +28,8 @@
   --dash: #CDBFD0;
   --table-line: #DDD3DF;
   --panel: #F5F0F6;
+  --eau: #BFD9EC;      /* solo decorativo (mappa) */
+  --vegetal: #CFE3C6; /* solo decorativo (mappa) */
 
   /* Raggi */
   --r-14: 14px;
@@ -208,7 +210,6 @@ h2 {
   stroke-linejoin: round;
 }
 .trait--rond { stroke-linecap: round; }
-.trait--doux { stroke: var(--ink-soft); }
 .plein { fill: var(--ink); }
 
 /* ---------- Blocchi di contenuto ---------- */
@@ -440,19 +441,52 @@ main { flex: 1 0 auto; }
   font-size: 16px;
   color: var(--ink-soft);
 }
-.carte-attente {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 16px;
+.carte {
+  margin: 0;
+  border: 2px solid var(--ink);
   border-radius: var(--r-20);
-  border: 2px dashed var(--dash);
-  font-size: 15px;
-  color: var(--ink-soft);
+  overflow: hidden;
 }
-.carte-attente svg { flex: 0 0 auto; }
+.carte svg {
+  width: 100%;
+  height: auto;
+}
+.carte-fond { fill: var(--panel); }
+.carte-eau {
+  fill: none;
+  stroke: var(--eau);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+.carte-route-bord,
+.carte-route { fill: none; stroke-linecap: round; }
+.carte-route-bord { stroke: var(--line-strong); stroke-width: 14; }
+.carte-route { stroke: var(--paper); stroke-width: 10; }
+.carte-pins { fill: var(--vegetal); }
+.carte-vigne { fill: var(--line-strong); }
+.carte-parcelle { fill: var(--saveur); }
+.carte-rangs { fill: url(#rangs); }
+.carte-rang { stroke: var(--ink); stroke-width: 1.2; stroke-opacity: 0.22; }
+.carte-contour {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.carte-etiquette {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.carte-texte {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+.carte-batiment,
+.carte-nord path { fill: var(--ink); }
+.carte-porte { fill: var(--saveur); }
 
 .etapes {
   display: flex;

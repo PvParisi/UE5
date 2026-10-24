@@ -36,13 +36,54 @@
 
 <section class="bloc bloc--suite bloc--g12" aria-labelledby="titre-origine">
   <h2 id="titre-origine">D'où vient le vin</h2>
-  <div class="carte-attente">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
-      <path class="trait trait--doux" d="M12 21s-6.5-5.8-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 15.2 12 21 12 21Z"/>
-      <circle class="trait trait--doux" cx="12" cy="9.8" r="2.3"/>
+  <!-- Plan illustratif inventé (voir CLAUDE.md) : pas une carte réelle, pas d'échelle. -->
+  <figure class="carte">
+    <svg viewBox="0 0 340 220" role="img" aria-labelledby="carte-titre">
+      <title id="carte-titre">Plan illustratif du Domaine de Georges&nbsp;: la parcelle d'Ugni blanc, les autres vignes, la cave, un ruisseau et une pinède.</title>
+      <defs>
+        <pattern id="rangs" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-6)">
+          <line class="carte-rang" x1="0" y1="0" x2="0" y2="9"/>
+        </pattern>
+      </defs>
+      <rect class="carte-fond" width="340" height="220"/>
+
+      <path class="carte-eau" d="M262 0 C250 40 290 70 276 110 S300 180 318 220"/>
+      <path class="carte-route-bord" d="M0 140 C70 128 120 152 190 142 S300 120 340 128"/>
+      <path class="carte-route" d="M0 140 C70 128 120 152 190 142 S300 120 340 128"/>
+
+      <g class="carte-pins">
+        <circle cx="306" cy="66" r="10"/>
+        <circle cx="324" cy="80" r="11"/>
+        <circle cx="304" cy="88" r="8"/>
+        <circle cx="160" cy="196" r="9"/>
+        <circle cx="176" cy="186" r="10"/>
+        <circle cx="174" cy="206" r="8"/>
+      </g>
+
+      <polygon class="carte-vigne" points="16,16 116,12 120,112 18,118"/>
+      <polygon class="carte-rangs" points="16,16 116,12 120,112 18,118"/>
+      <polygon class="carte-vigne" points="18,160 140,156 146,204 22,208"/>
+      <polygon class="carte-rangs" points="18,160 140,156 146,204 22,208"/>
+
+      <polygon class="carte-parcelle" points="132,14 238,22 232,112 128,108"/>
+      <polygon class="carte-rangs" points="132,14 238,22 232,112 128,108"/>
+      <polygon class="carte-contour" points="132,14 238,22 232,112 128,108"/>
+
+      <rect class="carte-etiquette" x="138" y="43" width="88" height="38" rx="8"/>
+      <text class="carte-texte" x="182" y="59">Parcelle</text>
+      <text class="carte-texte" x="182" y="74">d'Ugni blanc</text>
+
+      <polygon class="carte-batiment" points="198,168 220,152 242,168"/>
+      <rect class="carte-batiment" x="202" y="168" width="36" height="22"/>
+      <rect class="carte-porte" x="215" y="176" width="10" height="14"/>
+      <text class="carte-texte" x="220" y="206">La cave</text>
+
+      <g class="carte-nord">
+        <path d="M322 14 L328 32 L322 28 L316 32 Z"/>
+        <text class="carte-texte" x="322" y="46">N</text>
+      </g>
     </svg>
-    <span>[Carte&nbsp;: le domaine et la parcelle d'Ugni blanc]</span>
-  </div>
+  </figure>
   <p class="texte texte--16">Une parcelle d'Ugni blanc du domaine, en Provence. Un cépage neutre&nbsp;: un support frais et acide pour les jus. Vin de France. [Le sol et le climat en une phrase.]</p>
 </section>
 
