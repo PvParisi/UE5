@@ -28,15 +28,20 @@
     <dl class="chiffres">
       <div>
         <dt>Degré</dt>
-        <dd>[X]&nbsp;% vol.</dd>
+        <dd data-alcool="avec">5,5&nbsp;% vol.</dd>
+        <dd data-alcool="sans">Sans alcool</dd>
       </div>
       <div>
         <dt>Format</dt>
-        <dd>[20]&nbsp;cl</dd>
+        <dd>25&nbsp;cl</dd>
       </div>
-      <div>
+      <div data-alcool="avec">
         <dt>Part de vin</dt>
-        <dd>[XX]&nbsp;%</dd>
+        <dd>55&nbsp;%</dd>
+      </div>
+      <div data-alcool="sans">
+        <dt>Base</dt>
+        <dd>[Jus de raisin]</dd>
       </div>
     </dl>
     <svg class="bouteille" viewBox="0 0 120 300" width="120" height="300" aria-hidden="true" focusable="false">
@@ -80,15 +85,21 @@
 <section class="bloc" aria-labelledby="titre-bouteille">
   <h2 id="titre-bouteille">Dans la bouteille</h2>
   <div class="compo">
-    <div class="compo-barre">
-      <div class="compo-vin">Vin [XX]&nbsp;%</div>
-      <div class="compo-aromes">[Arômes…]</div>
+    <div class="compo-barre" data-alcool="avec">
+      <div class="compo-vin">Vin 55&nbsp;%</div>
+      <div class="compo-aromes">Jus et arômes</div>
     </div>
-    <p class="note">Au moins 50&nbsp;% de vin&nbsp;: c'est la règle pour une boisson aromatisée à base de vin.</p>
+    <div class="compo-barre" data-alcool="sans">
+      <div class="compo-vin">[Jus de raisin XX&nbsp;%]</div>
+      <div class="compo-aromes">Fruits</div>
+    </div>
+    <p class="note" data-alcool="avec">Au moins 50&nbsp;% de vin&nbsp;: c'est la règle pour une boisson aromatisée à base de vin.</p>
   </div>
   <ul class="compo-liste">
-    <li><strong>Le vin.</strong> [Type de vin, appellation, domaine]</li>
-    <li><strong>Les arômes.</strong> [Fruits, plantes, épices&nbsp;: ingrédients naturels]</li>
+    <li data-alcool="avec"><strong>Le vin.</strong> Un blanc tranquille d'Ugni blanc, vendangé tôt pour garder sa fraîcheur. Domaine de Georges, Vin de France.</li>
+    <li data-alcool="sans"><strong>La base.</strong> [Jus de raisin d'Ugni blanc du domaine, à confirmer]</li>
+    <li><strong>Les fruits.</strong> <span data-saveur="fruits">Ananas et mangue</span>&nbsp;: jus et arômes naturels. [Recette à venir]</li>
+    <li data-alcool="avec"><strong>Les bulles.</strong> Du gaz carbonique alimentaire, ajouté à la mise en bouteille.</li>
     <li><strong>Le sucre.</strong> [X]&nbsp;g par litre</li>
   </ul>
 </section>
@@ -116,8 +127,8 @@
 </section>
 
 <section class="vigneron" aria-labelledby="titre-vigneron">
-  <h2 id="titre-vigneron">Qui fait ce vin&nbsp;?</h2>
-  <p>[Prénom], vigneron à [commune], [appellation].</p>
+  <h2 id="titre-vigneron"><span data-alcool="avec">Qui fait ce vin&nbsp;?</span><span data-alcool="sans">Qui fait PÉTILLE&nbsp;?</span></h2>
+  <p>Maréva et sa famille, au Domaine de Georges, un domaine familial depuis une cinquantaine d'années.</p>
   <a class="bouton bouton--saveur" href="histoire.html" data-lien="histoire">Découvrir notre histoire</a>
 </section>
 
