@@ -141,10 +141,10 @@ h2 {
   padding-bottom: 12px;
   border-bottom: 2px solid var(--line);
 }
-.marque {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+.marque-logo {
+  display: block;
+  height: 30px;
+  width: auto;
 }
 
 /* ---------- Hero saveur ---------- */
