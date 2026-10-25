@@ -6,12 +6,30 @@
 /* Le saveur: aggiungere o modificare una saveur = toccare solo qui.
    Nell'URL l'ordine parte da 1: index.html?saveur=2 apre la seconda. */
 const SAVEURS = [
-  { nom: 'Sunset Tropical', fruits: 'Ananas et mangue',                     color: '#FFB627', deep: '#D98200', tint: '#FFF1D3' },
-  { nom: 'Berry Pop',       fruits: 'Framboise et cranberry',               color: '#FF6F8E', deep: '#C9284F', tint: '#FFE2E8' },
-  { nom: 'Green Vibe',      fruits: 'Pomme verte et menthe',                color: '#8FD97A', deep: '#3E8F3A', tint: '#E6F6E0' },
-  { nom: 'Peach Glow',      fruits: 'Pêche et orange sanguine',             color: '#FF8A3D', deep: '#D9561A', tint: '#FFE6D6' },
-  { nom: '[Nom à venir]',   fruits: '[Pamplemousse rose, lavande, citron]', color: '#C7A6F2', deep: '#7E57C2', tint: '#F1E9FC' },
-  { nom: 'Golden Bloom',    fruits: 'Pomme et fleur de sureau', sansAlcool: true, color: '#F5D76E', deep: '#C9A227', tint: '#FDF6DC' },
+  { nom: 'Pink Bloom', fruits: 'Pamplemousse rose, lavande, citron',
+    recette: 'jus de pamplemousse rose, sirop de lavande, citron',
+    gout: ['Floral', 'Acidulé', 'Rafraîchissant'],
+    color: '#FFA3C2', deep: '#D94F86', tint: '#FFE9F1' },
+  { nom: 'Sunset Peach', fruits: 'Pêche, orange sanguine',
+    recette: 'nectar de pêche, jus d\'orange sanguine',
+    gout: ['Fruité', 'Doux', 'Gourmand'],
+    color: '#FF9A52', deep: '#D9621A', tint: '#FFE9D9' },
+  { nom: 'Hibiscus Kiss', fruits: 'Litchi, hibiscus, citron vert',
+    recette: 'jus de litchi, sirop d\'hibiscus, sirop de citron vert',
+    gout: ['Floral', 'Exotique', 'Légèrement acidulé'],
+    color: '#F0679A', deep: '#B0204F', tint: '#FDE3EC' },
+  { nom: 'Passion Flower', fruits: 'Fruit de la passion, fleur de sureau, citron vert',
+    recette: 'jus de fruit de la passion, sirop de fleur de sureau, citron vert',
+    gout: ['Exotique', 'Floral', 'Acidulé'],
+    color: '#C3A0F5', deep: '#7E57C2', tint: '#F1E9FC' },
+  { nom: 'Mango Fleur', fruits: 'Mangue, fleur d\'oranger, gingembre',
+    recette: 'nectar de mangue, fleur d\'oranger, sirop de gingembre',
+    gout: ['Doux', 'Exotique', 'Floral'],
+    color: '#FFC23D', deep: '#D98E00', tint: '#FFF3D6' },
+  { nom: 'Apple Blossom', fruits: 'Pomme, framboise, citron vert', sansAlcool: true,
+    recette: 'jus de pomme, purée de framboise, citron vert',
+    gout: ['Fruité', 'Frais', 'Légèrement acidulé'],
+    color: '#9BDB7E', deep: '#3E8F3A', tint: '#E8F7E1' },
 ];
 
 (function () {
@@ -53,9 +71,23 @@ const SAVEURS = [
     const s = SAVEURS[i];
     couleurs(i);
 
+    // data-saveur="champ": testo del campo; un array (gout) diventa una lista di <li>;
+    // data-majuscule mette la maiuscola iniziale (recette è in minuscolo per stare a metà frase)
     document.querySelectorAll('[data-saveur]').forEach(function (el) {
       const champ = el.getAttribute('data-saveur');
-      if (champ in s) el.textContent = s[champ];
+      if (!(champ in s)) return;
+      const valeur = s[champ];
+      if (Array.isArray(valeur)) {
+        el.replaceChildren.apply(el, valeur.map(function (texte) {
+          const li = document.createElement('li');
+          li.textContent = texte;
+          return li;
+        }));
+      } else if (el.hasAttribute('data-majuscule')) {
+        el.textContent = valeur.charAt(0).toUpperCase() + valeur.slice(1);
+      } else {
+        el.textContent = valeur;
+      }
     });
 
     // <title data-avec-saveur>Marque – Saveur</title>: aggiorna la parte dopo il trattino

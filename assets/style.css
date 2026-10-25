@@ -14,9 +14,9 @@
 /* ---------- Token di design ---------- */
 :root {
   /* Colori della saveur corrente (default: saveur 1, sovrascritti da app.js) */
-  --saveur: #FFB627;
-  --saveur-deep: #D98200;
-  --saveur-tint: #FFF1D3;
+  --saveur: #FFA3C2;
+  --saveur-deep: #D94F86;
+  --saveur-tint: #FFE9F1;
 
   /* Colori fissi */
   --ink: #2B1730;
@@ -169,6 +169,20 @@ h2 {
 }
 .hero-indice {
   font-size: 18px;
+  line-height: 1.3;
+}
+.gouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.gouts li {
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.3;
 }
 .hero-corps {
