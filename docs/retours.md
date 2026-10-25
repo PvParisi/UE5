@@ -18,3 +18,4 @@
 - [x] Retirer « Chez [notre embouteilleur partenaire], ». (Pier) — 2c5fbc2
 - [x] Réécrire « Gaz carbonique alimentaire, », peu parlant pour le consommateur. (Pier) — 2c5fbc2
 - [x] Réécrire « depuis une cinquantaine d'années », peu attractif. (Pier) — 1c63f06, 2c5fbc2
+- [x] « L'assemblage » : retirer « (55 %) » de « Le vin (55 %) rencontre des jus », déjà indiqué ailleurs. (Pier) — 749305f
