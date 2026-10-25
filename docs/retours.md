@@ -19,3 +19,4 @@
 - [x] Réécrire « Gaz carbonique alimentaire, », peu parlant pour le consommateur. (Pier) — 2c5fbc2
 - [x] Réécrire « depuis une cinquantaine d'années », peu attractif. (Pier) — 1c63f06, 2c5fbc2
 - [x] « L'assemblage » : retirer « (55 %) » de « Le vin (55 %) rencontre des jus », déjà indiqué ailleurs. (Pier) — 749305f
+- [x] Intégrer le logo PÉTILLE dans le site, sans « vin pétillant aux goûts d'ailleurs » ; P et nom séparables. (Pier) — 8e0db46, 354f9e5, e9e0ed0, d13db66
