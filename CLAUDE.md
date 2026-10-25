@@ -39,4 +39,5 @@
 - Piccoli passi, un commit per passo, messaggi chiari in italiano.
 - Anteprima: server locale (`python3 -m http.server 8000`) e indirizzo IP locale da aprire sull'iPhone, sulla stessa rete Wi-Fi.
 - Le richieste del gruppo (spesso in francese) le incollo in `docs/retours.md`: `docs/retours.md` è un registro cumulativo: checklist per data, con chi ha chiesto cosa. Applica solo i punti non spuntati, poi spuntali con l'hash del commit. Se due punti si contraddicono, o contraddicono una decisione già presa, chiedimi prima di procedere.
+- Cache: `style.css` e `app.js` sono richiamati con `?v=N` in tutte le pagine; a ogni modifica di uno dei due aumenta N ovunque, nello stesso commit.
 - Pubblicazione su GitHub Pages dal branch `main`. QR in SVG nella cartella `qr/`: uno per saveur e uno per l'e-label. Rigenerali solo se cambia l'URL.
