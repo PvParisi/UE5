@@ -2,3 +2,5 @@
 projet marketing.pdf
 # Foto originali ad alta risoluzione: nel sito vanno solo le versioni WebP in assets/img/
 pexels-*.jpg
+# Logo originale (con slogan), da cui si rigenerano i file in assets/img/
+logo-originale.png
