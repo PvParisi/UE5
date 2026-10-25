@@ -20,3 +20,4 @@
 - [x] Réécrire « depuis une cinquantaine d'années », peu attractif. (Pier) — 1c63f06, 2c5fbc2
 - [x] « L'assemblage » : retirer « (55 %) » de « Le vin (55 %) rencontre des jus », déjà indiqué ailleurs. (Pier) — 749305f
 - [x] Intégrer le logo PÉTILLE dans le site, sans « vin pétillant aux goûts d'ailleurs » ; P et nom séparables. (Pier) — 8e0db46, 354f9e5, e9e0ed0, d13db66
+- [x] Sur iPhone 17e, le logo « PÉTILLE » en haut déborde à droite. (Pier) — 41ae2ca ; en plus, titre de la saveur sans césure automatique — a75ac69
