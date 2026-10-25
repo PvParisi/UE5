@@ -434,6 +434,12 @@ main { flex: 1 0 auto; }
 .texte--16 { font-size: 16px; }
 
 .histoire-intro { padding-top: 8px; }
+.monogramme {
+  display: block;
+  height: 96px;
+  width: auto;
+  margin: 0 auto;
+}
 .histoire-intro h1 {
   font-size: 34px;
   line-height: 1.05;
