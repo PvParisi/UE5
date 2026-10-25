@@ -212,12 +212,6 @@ h2 {
   stroke: var(--ink);
   stroke-width: 3;
 }
-.b-nom {
-  fill: var(--ink);
-  font-size: 11px;
-  font-weight: 800;
-  text-anchor: middle;
-}
 
 /* ---------- Icone ---------- */
 .trait {
