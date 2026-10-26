@@ -9,8 +9,8 @@
 <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=6">
-<script src="assets/app.js?v=6"></script>
+<link rel="stylesheet" href="assets/style.css?v=7">
+<script src="assets/app.js?v=7"></script>
 </head>
 <body>
 <div class="page">
@@ -180,10 +180,20 @@
 </section>
 
 <section class="edition" aria-labelledby="titre-edition">
-  <div class="edition-visuel" aria-hidden="true">[Visuel]</div>
+  <div class="edition-visuel" aria-hidden="true">
+    <svg class="edition-art" viewBox="0 0 60 90" width="54" height="81" focusable="false">
+      <path class="ea-verre" d="M26 18 L26 28 C26 34 16 37 16 46 L16 82 C16 85 18 87 21 87 L39 87 C42 87 44 85 44 82 L44 46 C44 37 34 34 34 28 L34 18 Z"/>
+      <rect class="ea-encre" x="25" y="6" width="10" height="13" rx="2"/>
+      <rect class="ea-etiquette" x="18.5" y="50" width="23" height="28"/>
+      <path class="ea-trait ea-1" d="M21 57 C25 53 29 61 33 56 S38 53 39 55"/>
+      <path class="ea-trait ea-2" d="M21 64 C24 68 28 60 32 65 S37 69 39 63"/>
+      <path class="ea-trait ea-3" d="M22 72 C26 69 30 75 34 71"/>
+      <circle class="ea-point ea-4" cx="36" cy="73" r="2"/>
+    </svg>
+  </div>
   <div class="edition-texte">
-    <h2 id="titre-edition">Édition limitée&nbsp;: étiquette signée [artiste]</h2>
-    <p>[Une collaboration par saison&nbsp;: artiste, designer, lieu.]</p>
+    <h2 id="titre-edition">Édition limitée&nbsp;: étiquette d'artiste</h2>
+    <p>Chaque saison, une artiste de la région signe l'étiquette d'une série limitée.</p>
   </div>
 </section>
 

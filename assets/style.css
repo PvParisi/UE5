@@ -639,9 +639,29 @@ main { flex: 1 0 auto; }
   padding: 6px;
   border-radius: 12px;
   background: var(--saveur);
-  text-align: center;
-  font-size: 13px;
 }
+/* Bottiglia con etichetta « dipinta » nei colori dei gusti (decorativa) */
+.ea-verre {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.ea-encre { fill: var(--ink); }
+.ea-etiquette {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.ea-trait {
+  fill: none;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+.ea-1 { stroke: #D94F86; }
+.ea-2 { stroke: #7E57C2; }
+.ea-3 { stroke: #3E8F3A; }
+.ea-4 { fill: #D9621A; }
 .edition-texte {
   display: flex;
   flex-direction: column;
