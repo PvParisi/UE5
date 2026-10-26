@@ -7,7 +7,9 @@
    Nell'URL l'ordine parte da 1: index.html?saveur=2 apre la seconda.
    sucre: zuccheri totali in g/L (sotto i 35 g/L, soglia della taxe premix).
    ingredients: parte dell'elenco ingredienti dell'e-label propria del gusto, in ordine
-   decrescente (con alcool: tra « vin blanc (55 %) » e « gaz carbonique »). */
+   decrescente (con alcool: tra « vin blanc (55 %) » e « gaz carbonique »).
+   kj, kcal, glucides, sucres: valori per 100 ml, calcolati da alcol (5,5 % vol),
+   zucchero e glicerolo del vino; grassi, proteine e sale: 0 g. */
 const SAVEURS = [
   { nom: 'Pink Bloom', fruits: 'Pamplemousse rose, lavande, citron',
     recette: 'jus de pamplemousse rose, sirop de lavande, citron',
@@ -15,6 +17,7 @@ const SAVEURS = [
     sucre: 24,
     accord: 'Chèvre frais, poisson grillé',
     ingredients: 'jus de pamplemousse rose (22\u00a0%), eau, jus de citron (2\u00a0%), sirop de lavande (1\u00a0%) (sucre, eau, arôme naturel de lavande)',
+    kj: 171, kcal: 41, glucides: '2,8', sucres: '2,4',
     color: '#FFA3C2', deep: '#D94F86', tint: '#FFE9F1' },
   { nom: 'Sunset Peach', fruits: 'Pêche, orange sanguine',
     recette: 'nectar de pêche, jus d\'orange sanguine',
@@ -22,6 +25,7 @@ const SAVEURS = [
     sucre: 32,
     accord: 'Burrata, jambon cru',
     ingredients: 'nectar de pêche (20\u00a0%) (purée de pêche, eau, sucre), eau, jus d\'orange sanguine (10\u00a0%)',
+    kj: 184, kcal: 44, glucides: '3,6', sucres: '3,2',
     color: '#FF9A52', deep: '#D9621A', tint: '#FFE9D9' },
   { nom: 'Hibiscus Kiss', fruits: 'Litchi, hibiscus, citron vert',
     recette: 'jus de litchi, sirop d\'hibiscus, sirop de citron vert',
@@ -29,6 +33,7 @@ const SAVEURS = [
     sucre: 28,
     accord: 'Rouleaux de printemps, cuisine asiatique',
     ingredients: 'eau, jus de litchi (12\u00a0%), sirop d\'hibiscus (0,8\u00a0%) (sucre, eau, extrait d\'hibiscus), sirop de citron vert (0,4\u00a0%) (sucre, eau, jus de citron vert)',
+    kj: 178, kcal: 43, glucides: '3,2', sucres: '2,8',
     color: '#F0679A', deep: '#B0204F', tint: '#FDE3EC' },
   { nom: 'Passion Flower', fruits: 'Fruit de la passion, fleur de sureau, citron vert',
     recette: 'jus de fruit de la passion, sirop de fleur de sureau, citron vert',
@@ -36,6 +41,7 @@ const SAVEURS = [
     sucre: 26,
     accord: 'Ceviche, tartare de poisson',
     ingredients: 'eau, jus de fruit de la passion (15\u00a0%), jus de citron vert (2\u00a0%), sirop de fleur de sureau (1,2\u00a0%) (sucre, eau, extrait de fleur de sureau)',
+    kj: 174, kcal: 42, glucides: '3,0', sucres: '2,6',
     color: '#C3A0F5', deep: '#7E57C2', tint: '#F1E9FC' },
   { nom: 'Mango Fleur', fruits: 'Mangue, fleur d\'oranger, gingembre',
     recette: 'nectar de mangue, fleur d\'oranger, sirop de gingembre',
@@ -43,6 +49,7 @@ const SAVEURS = [
     sucre: 33,
     accord: 'Curry doux, cuisine épicée',
     ingredients: 'nectar de mangue (22\u00a0%) (purée de mangue, eau, sucre), eau, sirop de gingembre (0,5\u00a0%) (sucre, eau, extrait de gingembre), eau de fleur d\'oranger',
+    kj: 186, kcal: 45, glucides: '3,7', sucres: '3,3',
     color: '#FFC23D', deep: '#D98E00', tint: '#FFF3D6' },
   { nom: 'Apple Blossom', fruits: 'Pomme, framboise, citron vert', sansAlcool: true,
     recette: 'jus de pomme, purée de framboise, citron vert',
@@ -50,6 +57,7 @@ const SAVEURS = [
     sucre: 30,
     accord: 'Crêpes, desserts aux fruits rouges',
     ingredients: 'eau gazéifiée, jus de pomme (30\u00a0%), purée de framboise (4\u00a0%), jus de citron vert (1\u00a0%)',
+    kj: 53, kcal: 12, glucides: '3,1', sucres: '3,0',
     color: '#9BDB7E', deep: '#3E8F3A', tint: '#E8F7E1' },
 ];
 
