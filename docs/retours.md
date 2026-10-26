@@ -23,3 +23,7 @@
 - [x] Sur iPhone 17e, le logo « PÉTILLE » en haut déborde à droite. (Pier) — 41ae2ca ; en plus, titre de la saveur sans césure automatique — a75ac69
 - [x] Ajouter un numéro de version aux liens du CSS et du JS, contre le cache après chaque mise en ligne. (Pier) — 48e8a97
 - [x] Nouveaux goûts : Pink Bloom, Sunset Peach, Hibiscus Kiss, Passion Flower, Mango Fleur, Apple Blossom (sans alcool), avec recettes et profils de goût. Base inchangée (blanc d'Ugni blanc). (Pier) — 3eb3552, 7d82c0c
+
+## 26/10/2026
+
+- [x] Supprimer tous les textes encore provisoires, un par un. (Pier) — sucre a7e9dc1, température d0c3812, accords f90a1d1, Apple Blossom 2bdd26b, terroir 11a4536, édition d'artiste 517adc0, commune 27c514d, dénomination 1005246, ingrédients 7d110db, allergènes e7b8adf, valeurs nutritionnelles fafbcf7, producteur 1c380fc, CLAUDE.md fcc509c
