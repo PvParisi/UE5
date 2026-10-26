@@ -345,20 +345,21 @@ h2 {
 }
 
 /* ---------- Comment le servir ---------- */
-.service {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
 .service-carte {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 14px;
   padding: 16px;
   border-radius: var(--r-16);
   background: var(--saveur-tint);
   font-size: 15px;
   line-height: 1.35;
+}
+.service-carte svg { flex: 0 0 auto; }
+.service-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .service-titre { font-weight: 700; }
 
