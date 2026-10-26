@@ -5,43 +5,51 @@
 
 /* Le saveur: aggiungere o modificare una saveur = toccare solo qui.
    Nell'URL l'ordine parte da 1: index.html?saveur=2 apre la seconda.
-   sucre: zuccheri totali in g/L (sotto i 35 g/L, soglia della taxe premix). */
+   sucre: zuccheri totali in g/L (sotto i 35 g/L, soglia della taxe premix).
+   ingredients: parte dell'elenco ingredienti dell'e-label propria del gusto, in ordine
+   decrescente (con alcool: tra « vin blanc (55 %) » e « gaz carbonique »). */
 const SAVEURS = [
   { nom: 'Pink Bloom', fruits: 'Pamplemousse rose, lavande, citron',
     recette: 'jus de pamplemousse rose, sirop de lavande, citron',
     gout: ['Floral', 'Acidulé', 'Rafraîchissant'],
     sucre: 24,
     accord: 'Chèvre frais, poisson grillé',
+    ingredients: 'jus de pamplemousse rose (22\u00a0%), eau, jus de citron (2\u00a0%), sirop de lavande (1\u00a0%) (sucre, eau, arôme naturel de lavande)',
     color: '#FFA3C2', deep: '#D94F86', tint: '#FFE9F1' },
   { nom: 'Sunset Peach', fruits: 'Pêche, orange sanguine',
     recette: 'nectar de pêche, jus d\'orange sanguine',
     gout: ['Fruité', 'Doux', 'Gourmand'],
     sucre: 32,
     accord: 'Burrata, jambon cru',
+    ingredients: 'nectar de pêche (20\u00a0%) (purée de pêche, eau, sucre), eau, jus d\'orange sanguine (10\u00a0%)',
     color: '#FF9A52', deep: '#D9621A', tint: '#FFE9D9' },
   { nom: 'Hibiscus Kiss', fruits: 'Litchi, hibiscus, citron vert',
     recette: 'jus de litchi, sirop d\'hibiscus, sirop de citron vert',
     gout: ['Floral', 'Exotique', 'Légèrement acidulé'],
     sucre: 28,
     accord: 'Rouleaux de printemps, cuisine asiatique',
+    ingredients: 'eau, jus de litchi (12\u00a0%), sirop d\'hibiscus (0,8\u00a0%) (sucre, eau, extrait d\'hibiscus), sirop de citron vert (0,4\u00a0%) (sucre, eau, jus de citron vert)',
     color: '#F0679A', deep: '#B0204F', tint: '#FDE3EC' },
   { nom: 'Passion Flower', fruits: 'Fruit de la passion, fleur de sureau, citron vert',
     recette: 'jus de fruit de la passion, sirop de fleur de sureau, citron vert',
     gout: ['Exotique', 'Floral', 'Acidulé'],
     sucre: 26,
     accord: 'Ceviche, tartare de poisson',
+    ingredients: 'eau, jus de fruit de la passion (15\u00a0%), jus de citron vert (2\u00a0%), sirop de fleur de sureau (1,2\u00a0%) (sucre, eau, extrait de fleur de sureau)',
     color: '#C3A0F5', deep: '#7E57C2', tint: '#F1E9FC' },
   { nom: 'Mango Fleur', fruits: 'Mangue, fleur d\'oranger, gingembre',
     recette: 'nectar de mangue, fleur d\'oranger, sirop de gingembre',
     gout: ['Doux', 'Exotique', 'Floral'],
     sucre: 33,
     accord: 'Curry doux, cuisine épicée',
+    ingredients: 'nectar de mangue (22\u00a0%) (purée de mangue, eau, sucre), eau, sirop de gingembre (0,5\u00a0%) (sucre, eau, extrait de gingembre), eau de fleur d\'oranger',
     color: '#FFC23D', deep: '#D98E00', tint: '#FFF3D6' },
   { nom: 'Apple Blossom', fruits: 'Pomme, framboise, citron vert', sansAlcool: true,
     recette: 'jus de pomme, purée de framboise, citron vert',
     gout: ['Fruité', 'Frais', 'Légèrement acidulé'],
     sucre: 30,
     accord: 'Crêpes, desserts aux fruits rouges',
+    ingredients: 'eau gazéifiée, jus de pomme (30\u00a0%), purée de framboise (4\u00a0%), jus de citron vert (1\u00a0%)',
     color: '#9BDB7E', deep: '#3E8F3A', tint: '#E8F7E1' },
 ];
 
