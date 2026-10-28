@@ -321,12 +321,6 @@ h2 {
   font-size: 16px;
   font-weight: 700;
 }
-.compo-vin--fruits {
-  flex: 0 0 auto;
-  min-width: 25%;
-  padding: 0 10px;
-  white-space: nowrap;
-}
 .compo-aromes {
   flex: 1 1 auto;
   display: flex;
