@@ -20,7 +20,8 @@ magick "$T/colore.png" "$T/alfa.png" -alpha off -compose CopyOpacity -composite 
 magick -size 360x84 xc:'#2B1730' \
   \( "$O" -crop 360x84+161+414 +repage -alpha off -colorspace gray -negate -level 4%,80% -fill black -draw "rectangle 74,0 360,9" \) \
   -alpha off -compose CopyOpacity -composite "$T/etille.png"
-# Composizione: base della P (y 392 nel ritaglio → 114 scalato) sulla base di ÉTILLE (y 80), entrambe a y 118
-magick -size 459x122 xc:none "$T/mono-t.png" -geometry +0+4 -composite "$T/etille.png" -geometry +99+38 -composite \
+# Composizione: base della P (y 392 nel ritaglio → 114 scalato) sulla base di ÉTILLE (y 80), entrambe a y 118;
+# 14 px tra la pancia della P (x 91) e la É (x 105), come tra le altre lettere
+magick -size 455x122 xc:none "$T/mono-t.png" -geometry +0+4 -composite "$T/etille.png" -geometry +95+38 -composite \
   -define webp:lossless=true "$D/logo-entete.webp"
 rm -rf "$T"
