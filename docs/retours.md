@@ -32,3 +32,4 @@
 ## 28/10/2026
 
 - [x] Pour le logo « PÉTILLE » de l'en-tête, utiliser la même P que sur l'étiquette de la bouteille et dans l'histoire, plus grande, à la place de la P actuelle et alignée sur le reste du mot. (Pier) — fb4e4aa
+- [x] Rapprocher très légèrement la P du É (seulement la lettre noire, pas les bulles). (Pier) — 35b1fae
