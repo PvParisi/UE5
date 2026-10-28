@@ -323,7 +323,7 @@ h2 {
 }
 .compo-vin--fruits {
   flex: 0 0 auto;
-  min-width: 35%;
+  min-width: 25%;
   padding: 0 10px;
   white-space: nowrap;
 }
