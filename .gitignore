@@ -6,3 +6,5 @@ pexels-*.jpg
 logo-originale.png
 # Disegno originale della bottiglia, da cui si rigenerano i file in assets/img/
 bouteille-originale.png
+# Foto originale del gruppo (le versioni WebP sono in assets/img/)
+photo-equipe-originale.jpg
