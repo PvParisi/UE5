@@ -36,3 +36,4 @@
 - [x] Nouvelles recettes et noms validés (Mango, White Blossom), avec valeurs nutritionnelles mises à jour pour chaque goût. (Pier) — d7ecaba
 - [x] Le vin passe à 60 % et le degré à 6 % vol. : revoir composition, ingrédients et valeurs nutritionnelles. (Pier) — a46e2b9
 - [x] Retirer la barre de composition de White Blossom. (Pier) — 769d70c
+- [x] White Blossom : retirer « Part de fruits 25 % ». (Pier) — 430be04
