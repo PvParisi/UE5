@@ -37,3 +37,8 @@
 - [x] Le vin passe à 60 % et le degré à 6 % vol. : revoir composition, ingrédients et valeurs nutritionnelles. (Pier) — a46e2b9
 - [x] Retirer la barre de composition de White Blossom. (Pier) — 769d70c
 - [x] White Blossom : retirer « Part de fruits 25 % ». (Pier) — 430be04
+- [x] « Le vin. Un blanc tranquille d'Ugni blanc » → « Un vin d'Ugni blanc ». (Pier) — d879af9
+- [x] « avec ses camarades de master » → « avec ses amis ». (Pier) — d879af9
+- [x] Retirer « sans fermentation malolactique ». (Pier) — d879af9
+- [x] Retirer « Il reste majoritaire : au moins 50 %, c'est la règle. ». (Pier) — d879af9
+- [x] Masquer l'encadré « Édition limitée », pas le temps de la faire pour l'instant. (Pier) — 457f15f
