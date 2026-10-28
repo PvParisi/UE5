@@ -9,8 +9,8 @@
 <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=15">
-<script src="assets/app.js?v=15"></script>
+<link rel="stylesheet" href="assets/style.css?v=16">
+<script src="assets/app.js?v=16"></script>
 </head>
 <body>
 <div class="page">
@@ -47,36 +47,11 @@
         <dd>60&nbsp;%</dd>
       </div>
     </dl>
-    <svg class="bouteille" viewBox="0 0 120 300" width="120" height="300" aria-hidden="true" focusable="false">
-      <defs>
-        <clipPath id="bouteille-verre">
-          <path d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
-        </clipPath>
-      </defs>
-      <path class="b-fond" d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
-      <rect class="b-liquide" x="0" y="104" width="120" height="200" clip-path="url(#bouteille-verre)"/>
-      <path class="b-contour" d="M50 30 L50 74 C50 94 26 102 26 128 L26 278 C26 288 34 294 44 294 L76 294 C86 294 94 288 94 278 L94 128 C94 102 70 94 70 74 L70 30 Z"/>
-      <rect class="b-encre" x="46" y="6" width="28" height="26" rx="4"/>
-      <rect class="b-etiquette" x="27" y="166" width="66" height="80"/>
-      <image href="assets/img/logo-p.webp" x="47" y="169" width="26" height="28"/>
-      <g class="b-encre">
-        <rect x="46" y="200" width="10" height="10"/>
-        <rect x="64" y="200" width="10" height="10"/>
-        <rect x="46" y="218" width="10" height="10"/>
-        <rect x="59" y="201" width="3" height="3"/>
-        <rect x="59" y="207" width="3" height="3"/>
-        <rect x="57" y="214" width="3" height="3"/>
-        <rect x="64" y="214" width="3" height="3"/>
-        <rect x="68" y="218" width="3" height="3"/>
-        <rect x="60" y="222" width="3" height="3"/>
-        <rect x="71" y="224" width="3" height="3"/>
-      </g>
-      <g class="b-papier">
-        <rect x="49" y="203" width="4" height="4"/>
-        <rect x="67" y="203" width="4" height="4"/>
-        <rect x="49" y="221" width="4" height="4"/>
-      </g>
-    </svg>
+    <!-- Bouteille du groupe ; le liquide prend la couleur du goût (masque + multiply). Voir docs/genera-bouteille.sh -->
+    <div class="bouteille" aria-hidden="true">
+      <img class="bouteille-dessin" src="assets/img/bouteille.webp" alt="" width="116" height="340">
+      <span class="bouteille-liquide"></span>
+    </div>
   </div>
 </section>
 

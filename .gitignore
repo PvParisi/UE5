@@ -4,3 +4,5 @@ projet marketing.pdf
 pexels-*.jpg
 # Logo originale (con slogan), da cui si rigenerano i file in assets/img/
 logo-originale.png
+# Disegno originale della bottiglia, da cui si rigenerano i file in assets/img/
+bouteille-originale.png
