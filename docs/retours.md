@@ -42,3 +42,4 @@
 - [x] Retirer « sans fermentation malolactique ». (Pier) — d879af9
 - [x] Retirer « Il reste majoritaire : au moins 50 %, c'est la règle. ». (Pier) — d879af9
 - [x] Masquer l'encadré « Édition limitée », pas le temps de la faire pour l'instant. (Pier) — 457f15f
+- [x] Points de vente : au lancement on reste dans le Sud (Marseille, Aix, Nice, Toulon, Cannes, Saint-Tropez). (Pier) — edc097d, aefac84
