@@ -14,9 +14,9 @@
 /* ---------- Token di design ---------- */
 :root {
   /* Colori della saveur corrente (default: saveur 1, sovrascritti da app.js) */
-  --saveur: #FFA3C2;
-  --saveur-deep: #D94F86;
-  --saveur-tint: #FFE9F1;
+  --saveur: #EF81B4;
+  --saveur-deep: #C9558C;
+  --saveur-tint: #FCE6F0;
 
   /* Colori fissi */
   --ink: #2B1730;
