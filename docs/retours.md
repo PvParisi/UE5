@@ -28,3 +28,7 @@
 
 - [x] Supprimer tous les textes encore provisoires, un par un. (Pier) — sucre a7e9dc1, température d0c3812, accords f90a1d1, Apple Blossom 2bdd26b, terroir 11a4536, édition d'artiste 517adc0, commune 27c514d, dénomination 1005246, ingrédients 7d110db, allergènes e7b8adf, valeurs nutritionnelles fafbcf7, producteur 1c380fc, CLAUDE.md fcc509c
 - [x] Retirer la box « Pour accompagner » : « vu que notre idée c'est de sortir le vin du repas ». (groupe) — 3291b57
+
+## 28/10/2026
+
+- [x] Pour le logo « PÉTILLE » de l'en-tête, utiliser la même P que sur l'étiquette de la bouteille et dans l'histoire, plus grande, à la place de la P actuelle et alignée sur le reste du mot. (Pier) — fb4e4aa
