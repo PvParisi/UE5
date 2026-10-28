@@ -35,3 +35,4 @@
 - [x] Rapprocher très légèrement la P du É (seulement la lettre noire, pas les bulles). (Pier) — 35b1fae
 - [x] Nouvelles recettes et noms validés (Mango, White Blossom), avec valeurs nutritionnelles mises à jour pour chaque goût. (Pier) — d7ecaba
 - [x] Le vin passe à 60 % et le degré à 6 % vol. : revoir composition, ingrédients et valeurs nutritionnelles. (Pier) — a46e2b9
+- [x] Retirer la barre de composition de White Blossom. (Pier) — 769d70c
