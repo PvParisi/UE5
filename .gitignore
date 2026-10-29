@@ -6,3 +6,5 @@ pexels-*.jpg
 logo-originale.png
 # Disegno originale della bottiglia, da cui si rigenerano i file in assets/img/
 bouteille-originale.png
+# Bottiglie scontornate (foto Gemini), da cui si rigenerano le bouteille-*.webp in assets/img/
+bouteilles-originales/
