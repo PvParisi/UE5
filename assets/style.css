@@ -209,27 +209,14 @@ h2 {
 }
 
 /* ---------- Bottiglia ---------- */
-/* Disegno del gruppo (fondo trasparente) + liquido nel colore scuro del gusto:
-   la sagoma del liquido è una maschera, il colore si fonde col disegno in multiply */
+/* Foto scontornata del gusto (320 × 1020, fondo trasparente); src impostato da app.js.
+   Misure esplicite: lo spazio è riservato anche prima che la foto arrivi */
 .bouteille {
-  position: relative;
   flex: 0 0 auto;
-  width: 116px;
-  height: 340px;
-  isolation: isolate;
-}
-.bouteille-dessin {
   display: block;
-  width: 100%;
-  height: 100%;
-}
-.bouteille-liquide {
-  position: absolute;
-  inset: 0;
-  background: var(--saveur-deep);
-  mix-blend-mode: multiply;
-  -webkit-mask: url('img/bouteille-liquide.webp') 0 0 / 100% 100% no-repeat;
-  mask: url('img/bouteille-liquide.webp') 0 0 / 100% 100% no-repeat;
+  width: 107px;
+  height: 340px;
+  object-fit: contain;
 }
 
 /* ---------- Icone ---------- */

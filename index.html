@@ -9,8 +9,8 @@
 <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=16">
-<script src="assets/app.js?v=16"></script>
+<link rel="stylesheet" href="assets/style.css?v=17">
+<script src="assets/app.js?v=17"></script>
 </head>
 <body>
 <div class="page">
@@ -47,11 +47,8 @@
         <dd>60&nbsp;%</dd>
       </div>
     </dl>
-    <!-- Bouteille du groupe ; le liquide prend la couleur du goût (masque + multiply). Voir docs/genera-bouteille.sh -->
-    <div class="bouteille" aria-hidden="true">
-      <img class="bouteille-dessin" src="assets/img/bouteille.webp" alt="" width="116" height="340">
-      <span class="bouteille-liquide"></span>
-    </div>
+    <!-- Photo de la bouteille du goût : src ajouté par app.js (data-photo = dossier). Voir docs/genera-bouteilles-photo.sh -->
+    <img class="bouteille" data-photo="assets/img/" alt="" width="320" height="1020">
   </div>
 </section>
 

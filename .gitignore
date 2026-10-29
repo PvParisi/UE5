@@ -8,3 +8,5 @@ logo-originale.png
 bouteille-originale.png
 # Foto originale del gruppo (le versioni WebP sono in assets/img/)
 photo-equipe-originale.jpg
+# Bottiglie scontornate (foto Gemini), da cui si rigenerano le bouteille-*.webp in assets/img/
+bouteilles-originales/

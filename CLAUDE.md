@@ -14,7 +14,7 @@
 - `reference/mockup/` contiene il mockup di riferimento: `Main.dc.html` (pagina saveur), `Histoire.dc.html` (storia), `Elabel.dc.html` (e-label).
 - Formato del canvas di design da cui provengono: HTML con stili inline dentro `<x-dc>`; i `{{...}}` sono valori calcolati in `renderVals()` dello script `text/x-dc`; `<sc-for>` è un ciclo; `<helmet>` contiene font e stili di base.
 - Non è codice da pubblicare: va riprodotto fedelmente il design (colori, tipografia, spaziature, bottiglia SVG), riscritto in HTML/CSS/JS standard.
-  - Dal 28/10/2026 la bottiglia dell'hero è il disegno del gruppo (`docs/genera-bouteille.sh`, liquido colorato per gusto), non più quella SVG del mockup. Sull'etichetta lo slogan è « vin frais aux goûts d'ailleurs »; nel resto del sito lo slogan non compare.
+  - Dal 29/10/2026 la bottiglia dell'hero è una foto per gusto, generata con Gemini dal disegno del gruppo e scontornata (`docs/genera-bouteilles-photo.sh`; originali in `bouteilles-originales/`, fuori dal repository). Sostituisce il disegno del gruppo (28/10) e la bottiglia SVG del mockup. Sull'etichetta lo slogan è « vin frais aux goûts d'ailleurs »; nel resto del sito lo slogan non compare.
 
 ## Stack e struttura
 - HTML + CSS + JavaScript vanilla. Nessun framework, nessun build step.
