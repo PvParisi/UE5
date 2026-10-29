@@ -50,3 +50,4 @@
 ## 29/10/2026
 
 - [x] Utiliser les bouteilles détourées (photos générées avec Gemini) à la place du dessin dans le hero, une par goût. (Pier) — d0f88be, 07b956a, 7ed711b
+- [ ] Le goût Mango s'appelle désormais « Mango Gusto ». (Pier)

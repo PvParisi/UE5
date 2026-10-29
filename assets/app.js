@@ -44,7 +44,7 @@ const SAVEURS = [
     kj: 186, kcal: 45, glucides: '3,0', sucres: '2,6',
     color: '#8BCFB6', deep: '#4E9C80', tint: '#E8F5F0',
     photo: 'bouteille-passion-flower.webp' },
-  { nom: 'Mango', fruits: 'Mangue, fleur d\'oranger',
+  { nom: 'Mango Gusto', fruits: 'Mangue, fleur d\'oranger',
     recette: 'nectar de mangue, fleur d\'oranger',
     gout: ['Doux', 'Exotique', 'Floral'],
     sucre: 30,
