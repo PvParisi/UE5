@@ -9,7 +9,8 @@
    ingredients: parte dell'elenco ingredienti dell'e-label propria del gusto, in ordine
    decrescente (con alcool: tra « vin blanc (60 %) » e « gaz carbonique »).
    kj, kcal, glucides, sucres: valori per 100 ml, calcolati da alcol (6 % vol),
-   zucchero e glicerolo del vino; grassi, proteine e sale: 0 g. */
+   zucchero e glicerolo del vino; grassi, proteine e sale: 0 g.
+   photo: foto della bottiglia dell'hero in assets/img/ (docs/genera-bouteilles-photo.sh). */
 const SAVEURS = [
   { nom: 'Pink Bloom', fruits: 'Pamplemousse rose, lavande',
     recette: 'jus de pamplemousse rose, sirop de lavande',
@@ -17,42 +18,48 @@ const SAVEURS = [
     sucre: 23,
     ingredients: 'jus de pamplemousse rose (22 %), eau, sirop de lavande (1 %) (sucre, eau, arôme naturel de lavande)',
     kj: 181, kcal: 43, glucides: '2,7', sucres: '2,3',
-    color: '#EF81B4', deep: '#C9558C', tint: '#FCE6F0' },
+    color: '#EF81B4', deep: '#C9558C', tint: '#FCE6F0',
+    photo: 'bouteille-pink-bloom.webp' },
   { nom: 'Sunset Peach', fruits: 'Pêche, orange sanguine',
     recette: 'nectar de pêche, jus d\'orange sanguine',
     gout: ['Fruité', 'Doux', 'Gourmand'],
     sucre: 32,
     ingredients: 'nectar de pêche (20 %) (purée de pêche, eau, sucre), eau, jus d\'orange sanguine (10 %)',
     kj: 196, kcal: 47, glucides: '3,6', sucres: '3,2',
-    color: '#FF751F', deep: '#D4520A', tint: '#FFE3D2' },
+    color: '#FF751F', deep: '#D4520A', tint: '#FFE3D2',
+    photo: 'bouteille-sunset-peach.webp' },
   { nom: 'Hibiscus Kiss', fruits: 'Litchi, hibiscus',
     recette: 'jus de litchi, sirop d\'hibiscus',
     gout: ['Floral', 'Exotique', 'Légèrement acidulé'],
     sucre: 26,
     ingredients: 'eau, jus de litchi (12 %), sirop d\'hibiscus (0,8 %) (sucre, eau, extrait d\'hibiscus)',
     kj: 186, kcal: 45, glucides: '3,0', sucres: '2,6',
-    color: '#C991FB', deep: '#9A5CD6', tint: '#F4E9FE' },
+    color: '#C991FB', deep: '#9A5CD6', tint: '#F4E9FE',
+    photo: 'bouteille-hibiscus-kiss.webp' },
   { nom: 'Passion Flower', fruits: 'Fruit de la passion, fleur de sureau',
     recette: 'jus de fruit de la passion, sirop de fleur de sureau',
     gout: ['Exotique', 'Floral', 'Acidulé'],
     sucre: 26,
     ingredients: 'eau, jus de fruit de la passion (15 %), sirop de fleur de sureau (1,2 %) (sucre, eau, extrait de fleur de sureau)',
     kj: 186, kcal: 45, glucides: '3,0', sucres: '2,6',
-    color: '#8BCFB6', deep: '#4E9C80', tint: '#E8F5F0' },
+    color: '#8BCFB6', deep: '#4E9C80', tint: '#E8F5F0',
+    photo: 'bouteille-passion-flower.webp' },
   { nom: 'Mango', fruits: 'Mangue, fleur d\'oranger',
     recette: 'nectar de mangue, fleur d\'oranger',
     gout: ['Doux', 'Exotique', 'Floral'],
     sucre: 30,
     ingredients: 'nectar de mangue (22 %) (purée de mangue, eau, sucre), eau, eau de fleur d\'oranger',
     kj: 192, kcal: 46, glucides: '3,4', sucres: '3,0',
-    color: '#FFC657', deep: '#D99A1E', tint: '#FFF4DD' },
+    color: '#FFC657', deep: '#D99A1E', tint: '#FFF4DD',
+    photo: 'bouteille-mango.webp' },
   { nom: 'White Blossom', fruits: 'Raisin blanc, framboise', sansAlcool: true,
     recette: 'jus de raisin d\'Ugni blanc du domaine, purée de framboise, eau pétillante',
     gout: ['Fruité', 'Frais', 'Légèrement acidulé'],
     sucre: 33,
     ingredients: 'eau gazéifiée, jus de raisin blanc (Ugni blanc) (20 %), purée de framboise (5 %)',
     kj: 58, kcal: 14, glucides: '3,4', sucres: '3,3',
-    color: '#FEF3EA', deep: '#E2B9A0', tint: '#FEF3EA' },
+    color: '#FEF3EA', deep: '#E2B9A0', tint: '#FEF3EA',
+    photo: 'bouteille-white-blossom.webp' },
 ];
 
 (function () {
@@ -111,6 +118,12 @@ const SAVEURS = [
       } else {
         el.textContent = valeur;
       }
+    });
+
+    // <img data-photo="cartella/">: foto della bottiglia del gusto. Il src è solo qui e non
+    // nell'HTML, così con ?saveur=N non si scarica prima la foto della saveur 1
+    document.querySelectorAll('img[data-photo]').forEach(function (img) {
+      img.src = img.getAttribute('data-photo') + s.photo;
     });
 
     // <title data-avec-saveur>Marque – Saveur</title>: aggiorna la parte dopo il trattino
