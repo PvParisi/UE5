@@ -45,3 +45,7 @@
 - [x] Points de vente : au lancement on reste dans le Sud (Marseille, Aix, Nice, Toulon, Cannes, Saint-Tropez). (Pier) — edc097d, aefac84
 - [x] Nouvelles couleurs : Sunset Peach #ff751f, Mango #ffc657, Pink Bloom #ef81b4, Hibiscus Kiss #c991fb, Passion Flower #8bcfb6, White Blossom #fef3ea. (Pier) — 6403d81
 - [x] Utiliser l'image de la bouteille fournie à la place de la bouteille dessinée : liquide à la couleur du goût, slogan « vin frais aux goûts d'ailleurs », légère courbure du contenu de l'étiquette. (Pier) — 48aa7b7
+
+## 29/10/2026
+
+- [x] Utiliser les bouteilles détourées (photos générées avec Gemini) à la place du dessin dans le hero, une par goût. (Pier) — d0f88be, 07b956a, 7ed711b
