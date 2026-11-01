@@ -10,3 +10,5 @@ bouteille-originale.png
 photo-equipe-originale.jpg
 # Bottiglie scontornate (foto Gemini), da cui si rigenerano le bouteille-*.webp in assets/img/
 bouteilles-originales/
+# Copie dei QR rinominate per gusto (gli originali, da usare, restano in qr/)
+qr-par-saveur/
